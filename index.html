@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUDOKU</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="sudoku-table"></div>
+
+      <div class="buttons ml-1">
+        <h1 id="data-chronometer" class="mt-2 mb-2">00:00:00</h1>
+
+        <label class="fs-6">Choose Difficulty</label>
+        <select
+          id="select"
+          class="form-select form-select-sm mb-2"
+          onchange="difficulty()"
+        >
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+        </select>
+
+        <button class="btn btn-sm btn-secondary mb-1" id="check" type="button">
+          Check
+        </button>
+        <button id="solve" class="btn btn-sm btn-secondary mb-1" type="button">
+          Solve
+        </button>
+        <button id="start" class="btn btn-sm btn-secondary mb-1" type="button">
+          Start
+        </button>
+        <button id="restart" class="btn btn-sm btn-secondary mb-1">
+          Restart
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      $("document").ready(function () {
+        $("input").keypress(function (e) {
+          if (this.value.length == 1) return false;
+          if (e.key == "e" || e.key == "E" || e.key == "+" || e.key == "-")
+            return false;
+        });
+      });
+    </script>
+  </body>
+</html>

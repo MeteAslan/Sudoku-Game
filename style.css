@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+#sudoku-table,
+.subgrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+#sudoku-table {
+  width: 70vmin;
+  height: 70vmin;
+}
+
+.subgrid {
+  border: solid 0.1em indigo;
+  margin: 0.1em;
+}
+
+/* remove scrollbox from input:number */
+.field::-webkit-outer-spin-button,
+.field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.field {
+  -moz-appearance: textfield;
+  border-style: groove;
+  border-color: #0000005b;
+  width: 100%;
+  font-size: 4vh;
+  text-align: center;
+}
+
+.buttons {
+  margin-right: 40px;
+  margin-left: 50px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 50%;
+}
