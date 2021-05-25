@@ -1,2 +1,2 @@
 # Sudoku-Game
-[GitHub](https://meteaslan.github.io/Sudoku-Game/)
+[Game-Demo](https://meteaslan.github.io/Sudoku-Game/)
